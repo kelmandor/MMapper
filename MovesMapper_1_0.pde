@@ -1,21 +1,21 @@
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - -
 // MOVES MAPPER v1.0
 // Nicholas Felton — August 23, 2013
-// - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - -
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - -
 // LIBRARIES
-// - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - -
 import controlP5.*;
 import java.util.Map;
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - -
 // GLOBAL VARIABLES
-// - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - -
 
 // General
 int canvasSize = 800; // 550 minimum value
@@ -56,9 +56,9 @@ int TimeOfDay;
 String TimeString = "00:00:00";
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - -
 // SETUP
-// - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - -
 void setup() {
   size(canvasSize, canvasSize+150);
   smooth();
@@ -148,9 +148,9 @@ void setup() {
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - -
 // DRAW LOOP
-// - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - -
 
 void draw() {
   frame.setTitle(int(frameRate) + " fps / " + frameCount + " frames");
@@ -159,7 +159,7 @@ void draw() {
   timeLabel();
 
   // Draw Moves
-  for (int i=0; i<movesDates.length; i++) {      
+  for (int i=0; i<movesDates.length; i++) {
     try {
       moves.get(str(movesDates[i])).display();
     }
@@ -168,3 +168,6 @@ void draw() {
   }
 }
 
+void keyPressed() {
+  save("dkk");
+}
